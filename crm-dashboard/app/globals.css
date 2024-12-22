@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+
+  .animate-fluid {
+    background-size: 400% 400%;
+    animation: fluid 8s ease infinite;
+  }
+
+  .animate-fluid-slow {
+    background-size: 200% 200%;
+    animation: fluid 12s ease infinite;
+    animation-delay: -3s;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fluid {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 150%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
